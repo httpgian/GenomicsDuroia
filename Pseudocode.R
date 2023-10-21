@@ -18,19 +18,35 @@ cat ("the sum of Lea's creativity")
 
 # Una vez terminado el loop imprime la variable squaresum
 
-
+library(seqinr)
 
 #------------------------------------------------------------------------------
+# Comparar mis datos "Duroia hirsuta" con los de "Duroia aquatica" 
+# Ambos extraidos de GenBank
 
 
-#Que descargue datos de Genbank (Duroia hirsuta)
+# Instalar la libreria "ape"
 
-#Que abra el documento
-read.fasta(file =system.file("data/sequence.fasta"), package = "seqinr"),
-  seq
-  #Que cuente la cantidad de aminoacidos
+install.packages("ape", dependencies = T)
+library("ape")
 
-  #Que clasifique por aminoacido
 
-  #Que haga una tabla con esta informacion
+#Establecer el directorio de trabajo
+
+setwd ("C:/Users/Usuario/Desktop/GenomicsDuroia/data")
+
+#Revisar el directoro
+
+getwd()
+
+#Definir mis datos "Duroia hirsuta"
+
+Seq1 = read.FASTA("sequence.fasta", type = "DNA")
+
+#Definir los datos de Duroia aquatica
+
+Seq2 = read.FASTA("duraqu.fasta", type = "DNA")
+
+#Comparar las 2 Secuencias
+
 
